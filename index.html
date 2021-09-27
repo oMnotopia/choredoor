@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet" type="text/css">
+
+    <title>Chore Door</title>
+</head>
+<body>
+    <header>
+        <img src="https://content.codecademy.com/projects/chore-door/images/logo.svg" alt="Company Logo">
+    </header>
+    <div class="title-row">
+        <img src="https://content.codecademy.com/projects/chore-door/images/star.svg" alt="star">
+        <p class="instructions-title">Instructions</p>
+        <img src="https://content.codecademy.com/projects/chore-door/images/star.svg" alt="star">
+    </div>
+    <table class="instructions-row">
+        <tr>
+            <td class="instructions-number">1</td>
+            <td class="instructions-text">Hiding behind one of these doors is the ChoreBot.</td>
+        </tr>
+        <tr>
+            <td class="instructions-number">2</td>
+            <td class="instructions-text">Your mission is to open all of the doors without running into the ChoreBot.</td>
+        </tr>
+        <tr>
+            <td class="instructions-number">3</td>
+            <td class="instructions-text">If you manage to avoid the ChoreBot until you open the very last door, you win!</td>
+        </tr>
+        <tr>
+            <td class="instructions-number">4</td>
+            <td class="instructions-text">See if you can score a winning streak!</td>
+        </tr>
+    </table>
+    <div class="door-row">
+        <img id="door1" class="door-frame" src="resources/closed_door.PNG" alt="Image of a door">
+        <img id="door2" class="door-frame" src="resources/closed_door.PNG" alt="Image of a door">
+        <img id="door3" class="door-frame" src="resources/closed_door.PNG" alt="Image of a door">
+    </div>
+
+    <div id="game-reqs">
+
+        <div class="numOfDoorsInput">
+            <form>
+                Number of Doors:<br> <input type="text" name="doors">
+             </form>
+        </div>
+
+        <div id="start" class="start-row"></div>
+
+    </div>    
+    <div id="score-tracker" class="score-row">
+        <div class="current-streak">
+            <p class="score-title">Current Streak:</p>
+            <div class="current-streak-box">
+                <p id="current-score">0</p>
+            </div>
+        </div>
+        <div class="best-streak">   
+            <p class="score-title">Best Streak:</p>
+            <div class="best-streak-box">
+                <p id="best-score">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
