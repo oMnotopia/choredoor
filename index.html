@@ -37,7 +37,7 @@
             <td class="instructions-text">See if you can score a winning streak!</td>
         </tr>
     </table>
-    <div class="door-row">
+    <div id="door-rows" class="door-row">
         <img id="door1" class="door-frame" src="resources/closed_door.PNG" alt="Image of a door">
         <img id="door2" class="door-frame" src="resources/closed_door.PNG" alt="Image of a door">
         <img id="door3" class="door-frame" src="resources/closed_door.PNG" alt="Image of a door">
@@ -47,7 +47,9 @@
 
         <div class="numOfDoorsInput">
             <form>
-                Number of Doors:<br> <input type="text" name="doors">
+                <label for="numOfDoors">Number of Doors:</label>
+                <input type="text" id="numOfDoors">
+                <button id="btn" type="submit">Send</button>
              </form>
         </div>
 
