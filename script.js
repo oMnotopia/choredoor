@@ -9,7 +9,7 @@ const bestScore = document.getElementById('best-score')
 const submitBtn = document.getElementById('btn')
 
 //Vars for image paths
-const botDoorPath = "file:///C:/Users/persi/JavascriptProjects/CC-ChoreDoor/resources/robot1.jpg"
+const botDoorPath = "file:///C:/Users/persi/JavascriptProjects/CC-ChoreDoor/resources/robot.png"
 const beachDoorPath = "file:///C:/Users/persi/JavascriptProjects/CC-ChoreDoor/resources/beach.png"
 const spaceDoorPath = "file:///C:/Users/persi/JavascriptProjects/CC-ChoreDoor/resources/space.png"
 const closedDoorPath = "file:///C:/Users/persi/JavascriptProjects/CC-ChoreDoor/resources/closed_door.png"
@@ -84,55 +84,6 @@ doorImage3.addEventListener('click', () => {
 //Event listener 'click', starts/restarts the game.
 startButton.addEventListener('click', () => {
     if(currentlyPlaying===false) startRound();
-})
-
-//Event listener 'click' on form button captures user input.
-submitBtn.addEventListener('click', ev => {
-    ev.preventDefault();//stops the form submitting
-
-    const userInputOfDoors = document.getElementById('numOfDoors').value
-    const doorParentID = document.getElementById('door-rows')
-
-    numClosedDoors = parseInt(numClosedDoors,10)//Needs to be converted from int to num
-    let addOrSubtractDoors = userInputOfDoors-numClosedDoors
-    let newDoorID = numClosedDoors+1
-    let removeDoorID = Math.abs(numClosedDoors)
-
-    numClosedDoors = userInputOfDoors;
-
-    if (addOrSubtractDoors===0) return
-    
-    if (addOrSubtractDoors>0) {
-        console.log(addOrSubtractDoors)
-        while(addOrSubtractDoors!==0) {
-
-            
-
-            let newDoor = document.createElement("img")
-            let newDoorNumber = doorParentID.appendChild(newDoor)
-
-
-            newDoorNumber.setAttribute("id", "door"+newDoorID)
-            newDoorNumber.setAttribute("class", "door-frame")
-            newDoorNumber.setAttribute("src", closedDoorPath)
-
-            addOrSubtractDoors--
-            newDoorID++;
-        }
-    } else {
-        console.log(addOrSubtractDoors)
-        while(addOrSubtractDoors!==0) {
-
-            let removeDoor = document.getElementById("door"+removeDoorID)
-            console.log(removeDoorID)
-            let newDoorNumber = doorParentID.removeChild(removeDoor)
-
-            addOrSubtractDoors++
-            removeDoorID--
-        }  
-    }
-
-
 })
 
 //Starts/restarts the game.
